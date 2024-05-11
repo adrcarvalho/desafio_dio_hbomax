@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary: #020228;
+    --secondary: #ff00e5;
+    --tertiary: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg, #5516ba, rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+  
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--text-color);
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* BOTÕES */
+
+.button {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+  
+.button.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+  
+.button.button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary);
+    transform: scale(1.05);
+}
+
+/* RODAPÉ */
+
+footer {
+    display: block;
+    text-align: center;
+}
+
+.footer__links, 
+.footer__links_2,
+.footer__info,
+.social_media {
+    margin: 48px 0;
+}
+
+.social_media {
+    padding-bottom: 32px;
+}
+
+.footer__links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding: 16px;
+    transition: 0.5s ease;
+}
+
+.footer__link {
+    color: var(--link-color);
+}
+
+.footer__links_2 a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.5s ease;
+    text-align: center;
+    padding: 0 24px;
+}
+
+.footer__info {
+    color: var(--link-color);
+    font-size: 0.85rem;
+}
+
+.social_media img {
+    justify-content: center;
+    padding-left: 24px;
+}
+
+.social_media {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__links a:hover {
+    color: var(--text-color);
+    background-color: #fefefe32;
+    border-radius: 4px;
+}
+
+.footer__links_2 a:hover {
+    color: #b535f6;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+    section {
+        scroll-margin-top: 120px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    nav a img {
+        max-width: 100px;
+        padding-top: 32px;
+    }
+
+    .menu_end {
+        padding-bottom: 16px;
+    }
+
+    .header {
+        padding-top: 144px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .footer__link {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .footer__info {
+        margin: 16px;
+    }
+}
